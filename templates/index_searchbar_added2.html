@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photos of Choice</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f8f8f8;
+          margin: 0;
+          padding: 0;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .photo-container {
+            background: #eeeeee   ; /* sets the background color to grey */
+            column-count: 4;
+            margin: 0 auto;
+            max-width: 1024px;
+        }
+        .photo {
+            display: grid;    /* display images as inline-block elements */
+            background: #f5f5f5  ; 
+            padding: 12px; /* sets the padding to 10px */
+            break-inside: avoid;
+            
+        }
+
+         /* media query for screens smaller than 1020px */
+         @media (max-width: 1040px) {
+          .photo-container {
+            column-count: 3;
+            max-width: 750px;
+          }
+        }
+
+        /* media query for screens smaller than 768px */
+        @media (max-width: 780px) {
+          .photo-container {
+            column-count: 2;
+            max-width: 470px;
+          }
+        }
+
+        /* media query for screens smaller than 480px */
+        @media (max-width: 490px) {
+          .photo-container {
+            column-count: 1;
+            max-width: 250px;
+          }
+        }
+        .search-form {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .search-form input[type="text"] {
+          padding: 10px;
+          border-radius: 5px;
+          border: none;
+          margin-right: 10px;
+        }
+        .search-form input[type="submit"] {
+          padding: 10px;
+          border-radius: 5px;
+          border: none;
+          background-color: #4CAF50;
+          color: white;
+          cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>What photo would you like to see?</h1>
+    <form class="search-form" action="/" method="post">
+      <input type="text" name="query" placeholder="Enter a search query">
+      <input type="submit" value="Search">
+    </form>
+    <div class="photo-container">
+      {% for photo_url in photo_urls %}
+        <img class="photo" src="{{ photo_url }}" alt="Photo">
+      {% endfor %}
+    </div>
+    <h3>{{error_msg}}</h3>
+  </body>
+</html>

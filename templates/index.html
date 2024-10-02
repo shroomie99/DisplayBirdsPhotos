@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Photos</title>
+  </head>
+  <body>
+    <h1>Random Photos</h1>
+    <div>
+      {% for photo_url in photo_urls %}
+        <img src="{{ photo_url }}" alt="Photo">
+      {% endfor %}
+    </div>
+  </body>
+</html>
