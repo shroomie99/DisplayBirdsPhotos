@@ -19,7 +19,7 @@ Displays 10 random photos of birds on a webpage. Grid format changes based on sc
 ![alt text](image-1.png)
 
 
-DisplayAnyPhotos_withSearchBar.py
+- DisplayAnyPhotos_withSearchBar.py
 Requests a user for a photo they’d like to see. Displays 20 photos that relate to the photo type user requested. 
 
 ![alt text](image-5.png)
