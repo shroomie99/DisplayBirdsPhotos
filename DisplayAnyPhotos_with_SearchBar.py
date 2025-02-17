@@ -3,6 +3,7 @@ import json
 import os.path
 from flask import Flask, render_template, request
 
+
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
@@ -49,7 +50,7 @@ def home():
                 photo_urls = [photo['urls']['thumb'] for photo in data]
                 
                 # Save the data to file
-                filepath = r"C:\Users\Benjamin\Desktop\Python Projects\DisplayBirdPhotos\data\bird_data.json"
+                filepath = r"C:\Users\benla\OneDrive\Desktop\backup\Python Projects\Image-Search-Finder\data\bird_data.json"
                 with open(filepath, "w") as f:
                     json.dump(data, f)
         
@@ -57,7 +58,7 @@ def home():
         except Exception as e:
             print("Error", e)
             # If an error is thrown, extract URLs of the photos from file
-            filepath = r"C:\Users\Benjamin\Desktop\Python Projects\DisplayBirdPhotos\data\bird_data.json"
+            filepath = r"C:\Users\benla\OneDrive\Desktop\backup\Python Projects\Image-Search-Finder\data\bird_data.json"
             with open(filepath, "r") as f:
                 data = json.load(f)
                 photo_urls = [photo['urls']['thumb'] for photo in data]
