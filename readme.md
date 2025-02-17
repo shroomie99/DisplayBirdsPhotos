@@ -12,7 +12,8 @@ Setup:
 
 Example outputs:
 - DisplayRandomPhotos.py
-Displays 10 random photos of birds on a webpage. Grid format changes based on screen display. 
+Displays 10 random photos of birds on a webpage. Grid format changes based on screen display.
+
 ![alt text](image.png)
 
 ![alt text](image-1.png)
@@ -21,7 +22,6 @@ Displays 10 random photos of birds on a webpage. Grid format changes based on sc
 DisplayAnyPhotos_withSearchBar.py
 Requests a user for a photo they’d like to see. Displays 20 photos that relate to the photo type user requested. 
 
-![alt text](image-2.png)
 ![alt text](image-5.png)
 ![alt text](image-3.png)
 
